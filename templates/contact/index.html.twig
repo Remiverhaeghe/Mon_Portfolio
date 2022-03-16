@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter - Ma_boutique{% endblock %}
+
+{% block content %}
+    <h2>Nous contacter</h2>
+    <p>N'hésitez pas à prendre contact avec notre équipe, nous vous répondrons dans les meilleurs délais</p>
+   
+ {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+ {% endfor %}
+ <div class="row">
+        <div class="col-md-8">{{ form(form) }}</div>
+        <div class="col-md-4">
+            <strong>Ma_boutique</strong><br>
+            <hr>
+            06 06 06 06 06 06 <br>
+            8 rue des lilas, 59000 Lille <br>
+            contact@ma_boutique.fr <br>
+            <hr>
+        </div>
+    </div>
+{% endblock %}

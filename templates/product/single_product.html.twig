@@ -1,0 +1,6 @@
+<div class="product-item text-center">
+        <h5>{{ product.name }}</h5>
+        <a href="{{path('product', {'slug' : product.slug})}}"><img src="/uploads\files/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid"></a>
+        <span class="product-subtitle">{{ product.subtitle }}</span>
+        <span class="product-price">{{ (product.prix / 100)| number_format(2, ",", ".") }}€</span>
+</div>
